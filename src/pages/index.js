@@ -1,9 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { Formik } from "formik";
-
 import Layout from "../components/layout"
-import Seo from "../components/seo"
 import ContactForm from "../components/contact-form";
 
 // styles
