@@ -1,6 +1,6 @@
 # etendard-lfb
 
-## Key Information about this repo
+## Key Informations about this repo
 - This repo hosts my profesionnal website.
 - This website was built with Gatbsy, a static site generator using React and GraphQL.
 - I use Formium to handle form creation and submissions for the contact form.
