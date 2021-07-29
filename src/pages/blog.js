@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import { graphql, Link } from 'gatsby'
+import Seo from '../components/seo'
 
 
 const blogPostWrapper = {
@@ -23,9 +24,12 @@ const blogPostDate = {
     color: "rgb(170 170 170)"
 }
 
+
 const BlogPage = ({data}) => {
+    const siteTitle = data.site.siteMetadata?.title || `Title`
     return(
-        <Layout>
+        <Layout title={siteTitle}>
+            <Seo title="Blog" />
             <div>
                 {data.allMdx.nodes.map(({ excerpt, frontmatter, fields }) => (
                     <div style={blogPostWrapper}>
@@ -52,6 +56,11 @@ const BlogPage = ({data}) => {
 export const query = graphql
 `
     query BlogQuery {
+        site {
+            siteMetadata {
+                title
+        }
+        }
         allMdx(
             sort: { fields: [frontmatter___date], order: DESC }
             filter: { frontmatter: { published: { eq: true } } }

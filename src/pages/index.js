@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import ContactForm from "../components/contact-form";
+import Seo from '../components/seo'
 
 // styles
 const pageStyles = {
@@ -91,6 +92,7 @@ const badgeStyle = {
 const IndexPage = () => {
   return (
     <Layout style={pageStyles}>
+        <Seo title="Home" />
         <section className="about">
             <h2>About me</h2>
                 <h3>Skills</h3>
@@ -130,5 +132,6 @@ const IndexPage = () => {
     </Layout>
   )
 }
+
 
 export default IndexPage
