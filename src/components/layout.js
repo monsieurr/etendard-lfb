@@ -13,9 +13,9 @@ import "../styles/layout.css"
 
 import Header from "./header"
 
-import GithubIcon from '../images/github_tinyicon.svg'
-import GitlabIcon from '../images/gitlab_tinyicon.svg'
-import LinkedInIcon from '../images/linkedin_tinyicon.svg'
+import GithubIcon from '../assets/svgs/github_tinyicon.svg'
+import GitlabIcon from '../assets/svgs/gitlab_tinyicon.svg'
+import LinkedInIcon from '../assets/svgs/linkedin_tinyicon.svg'
 
 // data
 const links = [

@@ -2,17 +2,24 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
-
+import PersoImage from "./perso-image"
 
 const headingTitleStyle = {
   color: "#1D84EB",
-  textDecoration: "none"
+  textDecoration: "none",
 }
 
 const headerBannerStyle = {
     borderBottom: '1px solid rgb(29, 132, 235)',
     marginBottom: `0.2rem`,
-    fontFamily: "Lato"
+    fontFamily: "Lato",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    maxWidth: "960px",
+    margin: "0 auto",
+    flexWrap: "no-wrap",
+    justifyContent: "space-around",
 }
 
 const linkedListElemStyle = {
@@ -22,34 +29,30 @@ const linkedListElemStyle = {
 const linkedListStyle = {
     display: "flex",
     flexWrap: "wrap",
-    gap: "10px 20px"
+    gap: "10px 20px",
+    paddingInlineStart: "0px"
 
 }
 
-
 const Header = ({ siteTitle }) => (
   <header style={headerBannerStyle}>
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `0.6rem 1.0875rem`,
-      }}
-    >
+      <section className="siteHeaderText">
       <h1>
         <Link to="/" style={headingTitleStyle}>
           {siteTitle}
         </Link>
       </h1>
-      <section className="menu">
-        <ul style={linkedListStyle}>
-                <li style={linkedListElemStyle}><Link to="/" className="navLinkText" activeClassName="active">HOME</Link></li>
-                <li style={linkedListElemStyle}><Link to="/blog" className="navLinkText" activeClassName="active">BLOG</Link></li>
-                <li style={linkedListElemStyle}><Link to="/projects" className="navLinkText" activeClassName="active">PROJECTS</Link></li>
-                <li style={linkedListElemStyle}><Link to="/now" className="navLinkText" activeClassName="active">NOW</Link></li>
-        </ul>
-    </section>
-    </div>
+      <ul style={linkedListStyle}>
+        <li style={linkedListElemStyle}><Link to="/" className="navLinkText" activeClassName="active">HOME</Link></li>
+        <li style={linkedListElemStyle}><Link to="/blog" className="navLinkText" activeClassName="active">BLOG</Link></li>
+        <li style={linkedListElemStyle}><Link to="/projects" className="navLinkText" activeClassName="active">PROJECTS</Link></li>
+        <li style={linkedListElemStyle}><Link to="/now" className="navLinkText" activeClassName="active">NOW</Link></li>
+      </ul>
+      </section>
+
+      <section className="siteHeaderImage">
+        <PersoImage />
+      </section>
   </header>
 )
 

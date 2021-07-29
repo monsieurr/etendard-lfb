@@ -11,21 +11,23 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-styled-components",
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp", // Needed for dynamic images
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/assets/images/icon.png",
       },
     },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /images/ // See below to configure properly
+          include: /svgs/, // See below to configure properly
         }
       }
     },
@@ -52,7 +54,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/assets/images",
       },
       __key: "images",
     },

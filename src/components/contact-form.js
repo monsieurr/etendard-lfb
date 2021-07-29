@@ -33,8 +33,6 @@ export default function MyContactForm(props) {
         projectId
         schema
         slug
-        updateAt
-        version
       }
     }
     `}render={data => <ContactForm data={data} {...props} />}
