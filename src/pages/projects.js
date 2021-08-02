@@ -10,7 +10,7 @@ const ProjectPage = () => {
             <Seo title="Projects" />
             <h2>COMING SOON</h2>
             <p>I will put in details the projects I have been making during these past years.</p>
-            <p>Feel free to check the links below to see my past projects</p>
+            <p>Feel free to check my Github page linked below to see my past projects in the meantime.</p>
         </Layout>
     )
 }
