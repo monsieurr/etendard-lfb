@@ -2,6 +2,8 @@ import * as React from "react"
 import Layout from "../components/layout"
 import ContactForm from "../components/contact-form";
 import Seo from '../components/seo'
+import { Link } from "gatsby"
+
 
 // styles
 const pageStyles = {
@@ -49,6 +51,7 @@ const linkStyle = {
   fontSize: 16,
   verticalAlign: "5%",
 }
+
 
 const docLinkStyle = {
   ...linkStyle,
@@ -105,7 +108,7 @@ const IndexPage = () => {
                   I am currently open to work as I feel ready and confident to participate in an inovative project, feel free to <a href="#contact">contact me</a>.
                 </p>
 
-                <p>If you want to know more about what I do daily you can check the PROJECTS and NOW sections of this website.</p>
+                <p>If you want to know more about what I do daily you can check the <Link to="/projects" className="navLinkText" activeClassName="active">PROJECTS</Link> and <Link to="/now" className="navLinkText" activeClassName="active">NOW</Link> sections of this website.</p>
 
                 <h3>Interests</h3>
                 <p>

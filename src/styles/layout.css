@@ -1,34 +1,65 @@
-html {
-    background: rgb(29, 132, 235);
-    background: linear-gradient(-25deg, rgba(29, 132, 235, 1) 10%, rgba(255, 255, 255, 0) 10.1%, rgba(255, 255, 255, 0) 48%, rgba(255, 255, 255, 0) 90%, rgba(29, 132, 235, 1) 90.1%) no-repeat;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-
-body {
+html, body, :root {
     font-size: 1rem;
     line-height: 1.618;
     max-width: 38em;
     margin: auto;
-    color: rgb(70, 70, 70);
+    color: var(--content-text);
+
+    scrollbar-color: rgba(184, 195, 201, 0.596) rgba(255, 255, 255, 0.747);
+
+
+    background: var(--desktop-background);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-text);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--link-text-hover);
 }
 
 @media (max-width: 960px) {
-    html {
-        background: white;
+    html, body, :root {
+        background: var(--mobile-background);
+        scrollbar-color: rgba(53, 167, 233, 0.596) rgba(192, 235, 255, 0.185);
     }
+}
+
+
+.friendList {
+    list-style: none;
+    margin: 0.75em 0;
+    padding: 0 1em;
+}
+
+.friendList li:before {
+    content: "";
+    border-color: transparent rgb(70, 70, 70);
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    left: -1em;
+    position: relative;
+    top: 0.9em;
+    width: 0;
 }
 
 .navLinkText {
     text-decoration: none;
-    color:#1D84EB;
+    color: var(--link-text);
 }
 
 .navLinkText:hover {
-    color: rgb(70, 70, 70);
+    color: var(--link-text-hover);
 }
 
 .active {
@@ -38,7 +69,6 @@ body {
 
 /**Contact Form CSS**/
 .contact form {
-    border: 0.2px solid rgb(230, 230, 230);
     padding: 1rem;
 }
 
@@ -54,7 +84,7 @@ body {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    background: rgb(243, 243, 243);
+    background: var(--form-background);
     border: none;
     padding: 20px;
 
@@ -63,7 +93,7 @@ body {
 /*Form abels */
 .contact form div div label {
     font-weight: bold;
-    color: rgb(70, 70, 70);
+    color: var(--content-text);
     font-size: 1em;
 }
 
@@ -79,7 +109,7 @@ body {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    background: rgb(243, 243, 243);
+    background: var(--form-background);
     border: none;
     resize: none;
     padding: 20px;
@@ -88,7 +118,7 @@ body {
 /*Submit button */
 .contact button {
     border: none;
-    background: rgb(29, 132, 235);
+    background: var(--link-text);
     padding: 10px 30px 10px 30px;
     margin-top: 10px;
     border-radius: 10px
@@ -96,7 +126,7 @@ body {
 
 /*Submit button when mouse hover */
 .contact button:hover {
-    background: rgb(70, 70, 70);
+    background: var(--link-text-hover);
 }
 
 
@@ -123,5 +153,35 @@ body {
     padding-inline-start: 0px;
 }
 
-.siteHeaderImage {
+.persoImage {
+    filter: var(--image-filter);
+}
+
+.persoImage:hover {
+    filter: grayscale(50%);
+}
+
+.persoImage:active {
+    filter: grayscale(80%);
+}
+
+
+.dark {
+    --link-text: rgb(81, 114, 148);
+    --link-text-hover: rgb(160, 160, 160);
+    --content-text: rgba(173, 186, 199, 1);
+    --mobile-background: rgb(0, 0, 0);
+    --desktop-background: linear-gradient(-25deg, rgb(52, 73, 95) 10%, rgb(34, 39, 46) 10.1%, rgb(34, 39, 46) 48%, rgb(34, 39, 46) 90%, rgb(52, 73, 95) 90.1%) no-repeat;
+    --image-filter: grayscale(100%);
+    --form-background: rgba(173, 186, 199, 1);
+}
+
+.light {
+    --link-text: rgb(29, 132, 235);
+    --link-text-hover: rgb(70, 70, 70);
+    --content-text: rgb(70, 70, 70);
+    --mobile-background: rgb(245, 245, 245);
+    --desktop-background: linear-gradient(-25deg, rgba(29, 132, 235, 1) 10%, rgba(255, 255, 255, 0) 10.1%, rgba(255, 255, 255, 0) 48%, rgba(255, 255, 255, 0) 90%, rgba(29, 132, 235, 1) 90.1%) no-repeat;
+    --image-filter: grayscale(0%);
+    --form-background: rgb(230, 230, 230);
 }

@@ -17,6 +17,9 @@ import GithubIcon from '../assets/svgs/github_tinyicon.svg'
 import GitlabIcon from '../assets/svgs/gitlab_tinyicon.svg'
 import LinkedInIcon from '../assets/svgs/linkedin_tinyicon.svg'
 
+
+
+
 // data
 const links = [
   {
@@ -25,7 +28,7 @@ const links = [
     description:
       "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
     color: "#E95800",
-    icon: <LinkedInIcon height="32px" class="filter-bw"/>
+    icon: <LinkedInIcon height="40px" className="filter-bw"/>
   },
   {
     text: "Github",
@@ -33,7 +36,7 @@ const links = [
     description:
       "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
     color: "#1099A8",
-    icon: <GithubIcon height="32px" class="filter-bw"/>
+    icon: <GithubIcon height="40px" className="filter-bw"/>
   },
   {
     text: "Gitlab",
@@ -41,11 +44,16 @@ const links = [
     description:
       "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
     color: "#BC027F",
-    icon: <GitlabIcon height="32px" class="filter-bw"/>
+    icon: <GitlabIcon height="40px" className="filter-bw"/>
   }
 ]
 
+
 const Layout = ({ children }) => {
+
+
+  
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -71,10 +79,10 @@ const Layout = ({ children }) => {
         <footer
           style={{
             marginTop: `2rem`,
-            borderTop: '1px solid rgb(29, 132, 235)'
+            borderTop: '1px solid var(--link-text)'
           }}
         >
-        <ul style={{display: "flex", gap: "0.3em", justifyContent: "center"}} className="socialLinkList">
+        <ul style={{display: "flex", gap: "0.7em", justifyContent: "center"}} className="socialLinkList">
             {links.map(link => (
             <li key={link.url} style={{listStyleType: "none"}}>
                 <span>

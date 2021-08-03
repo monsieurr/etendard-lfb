@@ -11,7 +11,7 @@ const blogPostWrapper = {
 
 
 const blogPostLink = {
-    color: "#1D84EB",
+    color: "var(--link-text)",
     textDecoration: "none"
 }
 
@@ -22,6 +22,10 @@ const blogPostTitle = {
 
 const blogPostDate = {
     color: "rgb(170 170 170)"
+}
+
+const blogPostContent = {
+    color: "var(--content-text)"
 }
 
 
@@ -43,6 +47,7 @@ const BlogPage = ({data}) => {
                             __html: frontmatter.description || excerpt,
                             }}
                             itemProp="description"
+                            style={blogPostContent}
                         />
                         </section>
                     </div>

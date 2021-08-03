@@ -2,15 +2,15 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
-import PersoImage from "./perso-image"
+import ToggleMode from "./perso-image-toggle-theme"
 
 const headingTitleStyle = {
-  color: "#1D84EB",
+  //color: "#1D84EB",
   textDecoration: "none",
 }
 
 const headerBannerStyle = {
-    borderBottom: '1px solid rgb(29, 132, 235)',
+    borderBottom: '1px solid var(--link-text)',
     marginBottom: `0.2rem`,
     fontFamily: "Lato",
     display: "flex",
@@ -51,7 +51,7 @@ const Header = ({ siteTitle }) => (
       </section>
 
       <section className="siteHeaderImage">
-        <PersoImage />
+        <ToggleMode />
       </section>
   </header>
 )

@@ -3,6 +3,58 @@ import Layout from "../components/layout"
 import Seo from '../components/seo'
 
 
+const friendsList = [
+    {
+        name: 'Stending',
+        desc: 'bettercollmatt.com',
+        link: 'https://bettercollmatt.com/',
+    },
+    {
+        name: 'Uj',
+        desc: 'ujj.space',
+        link: 'https://ujj.space/',
+    },    
+    {
+        name: 'vmonot',
+        desc: 'vmonot.dev',
+        link: 'https://vmonot.dev/',
+    },    
+    {
+        name: 'Eresia',
+        desc: 'lepesant.me',
+        link: 'https://lepesant.me/fr',
+    },    
+    {
+        name: 'Akkes',
+        desc: 'akkes.fr',
+        link: 'https://akkes.fr/',
+    },    
+    {
+        name: 'AryaJ',
+        desc: 'www.aryaj.com',
+        link: 'https://www.aryaj.com/',
+    },
+]
+
+function shuffleArray(arr) {
+    var ctr = arr.length, temp, index;
+
+// While there are elements in the array
+    while (ctr > 0) {
+// Pick a random index
+        index = Math.floor(Math.random() * ctr);
+// Decrease ctr by 1
+        ctr--;
+// And swap the last element with it
+        temp = arr[ctr];
+        arr[ctr] = arr[index];
+        arr[index] = temp;
+    }
+    return arr;
+}
+
+const friendsListShuffled = shuffleArray(friendsList)
+
 const NowPage = () => {
     return(
         <Layout>
@@ -22,13 +74,25 @@ const NowPage = () => {
             <p>My <a href="https://www.monsieur.space/" alt="Link to monsieur.space">new creative website</a> I talked about earlier has some of my most recent photography work.</p>
 
             <h2>Learning new languages</h2>
-            <p>As a perpetual learner and </p>
+            <p>I am currently learning Italian, not bad at reading it but can't really speak it yet.</p>
 
             <h2>Reading</h2>
-            
+            <p>I am currently reading  : </p>
+            <ul>
+                <li><a href="https://www.goodreads.com/book/show/9536015-the-art-of-photography" alt="The Art of Photography"><cite>The Art of Photography: An Approach to Personal Expression</cite></a></li>
+                <li><a href="https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow" alt="Thinking Fast and Slow"><cite>Thinking Fast and Slow</cite></a></li>
+            </ul>
 
             <h2>Friends</h2>
-            <p>Friends are really important so here's a list of my friends websites you can check out, no favourite order of course it's random</p>
+            <p>Friends are really important so here's a list of my friends websites you can check out, no favourite order of course (it's random)</p>
+
+            <ul className="friendList">
+                {
+                    friendsListShuffled.map((friend) => (
+                        <li><a href={friend.link} alt={friend.desc}>{friend.name}</a></li>
+                    ))
+                }
+            </ul>
         </Layout>
     )
 }
