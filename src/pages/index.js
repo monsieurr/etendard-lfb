@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import ContactForm from "../components/contact-form";
 import Seo from '../components/seo'
 import { Link } from "gatsby"
+import Contact from "../components/contact";
 
 
 // styles
@@ -135,7 +136,7 @@ const IndexPage = () => {
 
         <section className="contact" id="contact">
             <h2>A question? A request? Contact me!</h2>
-            <ContactForm />
+            <Contact />
         </section>
     </Layout>
   )
