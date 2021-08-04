@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
 
-
-//const FAKE_GATEWAY_URL = "https://45m4q1dgcd.execute-api.eu-west-3.amazonaws.com/deployContactForm";
-const FAKE_GATEWAY_URL = "https://formspree.io/f/xqkwyybz";
+const FORMSPREE_URL = process.env.GATSBY_FORMSPREE_ENDPOINT;
 const required = "This field is required";
 
 const Contact = () => {
@@ -18,7 +16,7 @@ const Contact = () => {
 
   const onSubmit = async data => {
     try {
-      await fetch(FAKE_GATEWAY_URL, {
+      await fetch(FORMSPREE_URL, {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
