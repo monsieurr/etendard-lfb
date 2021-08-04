@@ -55,6 +55,7 @@ const Contact = () => {
         <h5>Name</h5>
         <input
             className="formInput"
+            placeholder="Your name"
           {...register("name", { required: true })} 
         />
         {errors.name && <div className="msg-error">{errors.name.message}</div>}
