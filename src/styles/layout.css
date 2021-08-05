@@ -1,4 +1,4 @@
-html, body, :root {
+body {
     font-size: 1rem;
     line-height: 1.618;
     max-width: 38em;
@@ -27,7 +27,7 @@ a:hover {
 }
 
 @media (max-width: 960px) {
-    html, body, :root {
+    body {
         background: var(--mobile-background);
         scrollbar-color: rgba(53, 167, 233, 0.596) rgba(192, 235, 255, 0.185);
     }
