@@ -205,3 +205,16 @@ a:hover {
     --image-filter: grayscale(0%);
     --form-background: rgb(230, 230, 230);
 }
+
+pre {
+     white-space: pre-wrap;
+     background-color: #ebebeb;
+     padding-top: 0.518vw;
+     padding-bottom: 0.585vw;
+     padding-left: 0.732vw;
+
+}
+
+code {
+    max-width: max-content;
+}

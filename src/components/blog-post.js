@@ -20,6 +20,17 @@ export const query = graphql
             frontmatter {
                 title
                 date(formatString: "YYYY MMMM Do")
+                image {
+                    childImageSharp {
+                    fluid(
+                        maxWidth: 608
+                        maxHeight: 300)
+                        {
+                            src
+                            srcSet
+                    }
+                    }
+                }
             }
         }
     }
@@ -35,6 +46,7 @@ export default ({ data }) => {
             />
             <h1>{frontmatter.title}</h1>
             <p>{frontmatter.date}</p>
+            <img src={frontmatter.image.childImageSharp.fluid.src} style={{width: '100%', height: 'auto'}}></img>
             <MDXRenderer>{body}</MDXRenderer>
         </Layout>
     )
