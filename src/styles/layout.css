@@ -217,4 +217,5 @@ pre {
 
 code {
     max-width: max-content;
+    word-break: break-all;
 }
