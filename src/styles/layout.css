@@ -185,6 +185,20 @@ a:hover {
     filter: grayscale(80%);
 }
 
+pre {
+    white-space: pre-wrap;
+    background-color: var(--code-background);
+    padding-top: 0.518vw;
+    padding-bottom: 0.585vw;
+    padding-left: 0.732vw;
+
+}
+
+code {
+    max-width: max-content;
+    /*word-break: break-all;*/
+}
+
 
 .dark {
     --link-text: rgb(81, 114, 148);
@@ -194,6 +208,7 @@ a:hover {
     --desktop-background: linear-gradient(-25deg, rgb(52, 73, 95) 10%, rgb(34, 39, 46) 10.1%, rgb(34, 39, 46) 48%, rgb(34, 39, 46) 90%, rgb(52, 73, 95) 90.1%) no-repeat;
     --image-filter: grayscale(100%);
     --form-background: rgba(173, 186, 199, 1);
+    --code-background: #171717;
 }
 
 .light {
@@ -204,18 +219,6 @@ a:hover {
     --desktop-background: linear-gradient(-25deg, rgba(29, 132, 235, 1) 10%, rgba(255, 255, 255, 0) 10.1%, rgba(255, 255, 255, 0) 48%, rgba(255, 255, 255, 0) 90%, rgba(29, 132, 235, 1) 90.1%) no-repeat;
     --image-filter: grayscale(0%);
     --form-background: rgb(230, 230, 230);
+    --code-background: #ebebeb;
 }
 
-pre {
-     white-space: pre-wrap;
-     background-color: #ebebeb;
-     padding-top: 0.518vw;
-     padding-bottom: 0.585vw;
-     padding-left: 0.732vw;
-
-}
-
-code {
-    max-width: max-content;
-    word-break: break-all;
-}
