@@ -22,6 +22,7 @@ const ContactForm = ({ data }) => {
   );
 }
 
+/*
 export default function MyContactForm(props) {
   return(
     <StaticQuery query={graphql`
@@ -38,4 +39,4 @@ export default function MyContactForm(props) {
     `}render={data => <ContactForm data={data} {...props} />}
     />
   )
-}
+}*/

@@ -132,8 +132,12 @@ const IndexPage = () => {
             <p>
                 It is more dev oriented and showing my organized side, I use my <a href="https://www.monsieur.space/" alt="monsieur.space link">other website</a> to show my creative/art making part.
             </p>
+
+            <h2>Currrent status</h2>
+            <p>I got a job for a consulting company at the end of last year, current mission implies working on SAP most of the week. I can't say much about it for now but I will write an update once the mission is finished</p>
         </section>
 
+        
         <section className="contact" id="contact">
             <h2>A question? A request? Contact me!</h2>
             <Contact />
